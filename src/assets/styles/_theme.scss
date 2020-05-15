@@ -1,0 +1,191 @@
+.rtl, .rtl * {
+  text-align: right;
+  direction: rtl;
+}
+
+i.fa {
+  margin-left: 8px;
+}
+
+.page-header {
+  vertical-align: middle;
+  margin: 15px 0;
+  padding: 0;
+  border-bottom: none;
+  display: flex;
+}
+
+.page-header h1 {
+  font-weight: 400;
+  font-size: 30px;
+  color: #848484;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.danger-row{
+  background-color: #e46666;
+}
+
+.page-header .form-actions {
+  display: flex;
+  margin-right: auto;
+}
+
+.page-header .form-actions .btn {
+  height: 32px;
+}
+
+.page-header .form-actions i {
+  display: inline;
+}
+
+.panel {
+  border-radius: 0px;
+}
+
+.panel-default {
+  border: 1px solid #e8e8e8;
+  border-top: 2px solid #bfbfbf;
+}
+
+.panel-default .panel-heading {
+	color: #595959;
+	border-color: #e8e8e8;
+	background: #fcfcfc;
+}
+
+.panel-heading {
+  color: #595959;
+  border-color: #e8e8e8;
+  background: #fcfcfc;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.panel-heading h3 {
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.panel-heading h3 i {
+  margin-left: 8px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+// .inline-form-item .ant-form-item-control-wrapper {
+//   display: inline !important;
+// }
+
+/*************************************/
+/****************  Form Styles *******/
+
+.jobjoo-form-label {
+  width: 120px;
+  text-align: left;
+  margin-left: 6px;
+  font-weight: bold;
+  padding-left: 2px;
+  padding-right: 0;
+}
+
+.jobjoo-form-label::after {
+  content: ' :';
+}
+
+.jobjoo-form-label-full-width {
+  width: 98%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-check {
+  padding-right: auto !important;
+  padding-left: 1.25rem;
+}
+
+.form-check-input {
+  margin-left: -1.25rem;
+  margin-right: auto !important;
+}
+
+.jobjoo-form-check-label-in-modal-lg {
+  margin-right: 104px;
+}
+
+div.required .jobjoo-form-label::before {
+  content: '* ';
+  color: #f00;
+  font-size: 12px;
+}
+
+
+.card-primary{
+  background-color: #2BB7DA;
+}
+
+
+.card-success{
+  background-color: #65C796;
+}
+
+
+.card-danger{
+  background-color: #DF6B78;
+}
+
+
+
+
+.card-warning{
+  background-color: #DFD73E;
+}
+
+
+.card-purple{
+  background-color: #642652;
+}
+.card-text-primary{
+  color: #2BB7DA;
+}
+
+
+.card-text-success{
+  color: #65C796;
+}
+
+
+.card-text-danger{
+  color: #DF6B78;
+}
+
+
+.card-text-warning{
+  color: #DFD73E;
+}
+
+.card-text-navy{
+  color: rgb(49, 165, 155);
+}
+
+
+.card-text-purple{
+  color: #642652;
+}
+
+.bg-purple{
+  background-color: #9d28a7 ;
+}
+
+.card-blue{
+  background-color: #091EC4;
+}
+.bg-blue{
+  background-color: #130b4c ;
+}

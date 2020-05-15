@@ -1,0 +1,96 @@
+:local(.simpleSearch .items){
+   position: relative;
+   top:130px;
+   margin : 0 auto;
+}
+:local(.simpleSearch .title h1){
+   height: 80px;
+   display: block;
+   margin: 10px auto -5px;
+   font-size: 30px;
+   font-weight: 500;
+   color: #ffffff;
+   text-align: center;
+}
+:local(.simpleSearch .searchFild ){
+   height: 200px;
+   position: relative;
+   margin: 40px auto 10px;
+}
+:local(.simpleSearch .tally){
+   height: 100px;
+   position: relative;
+   text-align: center;
+}
+:local(.simpleSearch .tally p){
+   color: #ffffff;
+   font-size: 27px;
+   font-weight: 400;
+}
+:local(.simpleSearch .tally span){
+   font-size: 23px;
+   font-weight: 400;
+   color: #FF4F4F;
+}
+:local(.simpleSearch .employer){
+   position: absolute;
+   text-align: center ;
+   width: 100%;
+   bottom: 0px;
+}
+:local(.simpleSearch .employer a){
+   width: 200px;
+   height: 40px;
+   display: block;
+   background-color: #5A1EC5;
+   font-size: 19px;
+   color: #ffffff;
+margin: 0 auto;
+line-height: 35px;
+border-radius: 15px 15px 0 0  ;
+}
+:local(.simpleSearch .simple){
+   height: 150px;
+   padding: 5px 20px 20px;
+   line-height: 20px;
+   margin: 0 auto;
+   border-radius: 12px ;
+   background-color: #ffffff;
+   box-shadow: 0px 0px 19px 1px #0000001e;
+   position: relative;
+   z-index: 150;
+   top:-35px;
+}
+:local(.simpleSearch .simple input){
+   width: 80%;
+   height: 60px;
+   margin: 20px auto 60px;
+   display: block;
+   border: 1px solid #7777776b;
+   border-radius: 30px;
+   text-align: center;
+}
+:local(.simpleSearch .simple input::placeholder){
+   text-align: center;
+   padding: 0 10px;
+   font-size: 18px;
+
+}
+:local(.simpleSearch .simple input:focus){
+   outline: none;
+   border: 2px solid #00009546;
+   border-radius: 30px;
+}
+:local(.simple button){
+   width: 90px;
+   height: 40px;
+   background-color: #FF4F4F;
+   color: #ffffff;
+   font-size: 21px;
+   border-radius: 20px;
+   border-color: #74747427;
+   position: relative;
+   text-align: center;
+   display: block;
+   margin: -20px auto !important;
+}

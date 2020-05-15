@@ -1,0 +1,116 @@
+:local(.jobHeader){
+   position: relative;
+   top: 70px;
+   height: 26vw;
+}
+:local(.jobHeader .sub){
+   position: relative;
+   top: -6vw;
+   margin: 0 auto;
+   color: #ffffff;
+}
+:local(.mask){
+   width: 100%;
+   position: absolute;
+   height: 26vw;
+background: linear-gradient(0deg, rgb(0, 0, 0) 1%, rgba(255, 255, 255, 0) 66%);
+}
+:local(.jobTitleBackG){
+   opacity: 1 !important ;
+}
+:local(.avatar){
+   display: block;
+   float: left;
+   margin: 1vw 0 0 ;
+   box-shadow: 0px 1px 10px 0px #00000031;
+   border-radius: 7px;
+   text-align: left;
+}
+:local(.titleJob h1){
+   font-size: 2vw;
+   margin-top : 1vw  !important;
+   margin-bottom : 1vw  !important;
+   color: #ffffff;
+
+}
+:local(.jobHeader .titleJob p ){
+   display:  block;
+   float: right;
+   direction: rtl;
+   font-size: 1vw;
+   margin-left: 5px;
+   margin-bottom : 1vw  !important;
+
+}
+:local(.jobHeader .titleJob small){
+   margin-right: 2px;
+   direction: rtl !important;
+}
+:local(.marker){
+   height: auto;
+   margin: .2vw 0;
+   border: 1px solid #F7A91B;
+   border-radius: 2vw;
+   border-bottom: 2px solid rgba(247, 170, 27, 0.788);
+padding: 0px 3px;
+   float: right;
+   background-color: #ffffff;
+   color: #F7A91B;
+width: auto;
+font-weight: 500;
+line-height: 30px;
+font-size: calc(7px + 6 * ((900vw - 320px) / 10000)) ;
+cursor: pointer;
+}
+:local( .noMarke){
+   height: auto;
+   margin: .2vw 0;
+   border: 1px solid #cacacabb;
+   border-radius: 2vw;
+   border-bottom: 2px solid #cacaca;
+padding: 0px 3px;
+   float: right;
+   background-color: #ffffff;
+   color: #cacaca;
+width: auto;
+font-weight: 500;
+line-height: 30px;
+font-size: calc(7px + 6 * ((900vw - 320px) / 10000)) ;
+cursor: pointer;
+}
+:local( .noMarke:hover){
+   color: #f7aa1ba6;
+   border: 1px solid #f7aa1ba4;
+   border-bottom: 2px solid #f7aa1b8f;
+
+}
+:local(.jobHeader .titleJob p:last-child){
+   margin: .2vw 0;
+   width: 100%;
+   font-size: 1.09vw;
+   display:  block;
+   float: right;
+   direction: rtl;
+}
+:local(.jobHeader .btnCv){
+width: 80%;
+line-height: 2.5vw;
+font-size: 1.4vw;
+   border: 1px solid #FF4F4F;
+   border-radius: 2vw;
+   position: relative;
+   bottom: -5vw;
+   display: block;
+   box-shadow: 0px 0px 19px 1px #0000001e;
+color: #ffffff;
+}
+:local(.jobHeader .btnCv:hover){
+color: #FF4F4F;
+background-color: #ffffff !important;
+border: 1px solid rgba(255, 69, 69, 0.308);
+
+}
+:local(.jobHeader .btnCv p){
+   margin:0 0 .5vw 0  !important;
+   padding: 0 1vw 0;
+}

@@ -1,0 +1,26 @@
+:local(.tagsDescription){
+   position: relative;
+   height:calc(800px + 6 * ((900vw - 320px) / 9080));
+   top: 100px;
+   margin: 4vw auto 5vw !important;
+}
+:local(.tagsDescription .tag){
+   color: #ffffff;
+   background-color: #FF4F4F;
+   font-size: calc(5px + 6 * ((900vw - 320px) / 9080));
+   height: 20px;
+   margin: 5px ;
+   padding: 0 5px;
+   line-height: 20px;
+   font-weight: 500;
+}
+:local(.tagsDescription .row){
+   margin-bottom: 1.5vw ;
+}
+:local(.tagsDescription p){
+   color: #3C3C3C;
+   font-size: 1.1vw;
+   line-height: 30px;
+   font-weight: 500;
+   margin-bottom: 2px;
+}

@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('../webfonts/vazir/Vazir-FD.eot');
+  src: url('../webfonts/vazir/Vazir-FD.eot?#iefix') format('embedded-opentype'),
+      url('../webfonts/vazir/Vazir-FD.woff') format('woff'),
+    url('../webfonts/vazir/Vazir-FD.woff2') format('woff2'),
+    url('../webfonts/vazir/Vazir-FD.ttf') format('truetype');
+  // src: url('../webfonts/vazir/Vazir.eot');
+  // src: url('../webfonts/vazir/Vazir.eot?#iefix') format('embedded-opentype'),
+  //   url('../webfonts/vazir/Vazir.woff') format('woff'),
+  //   url('../webfonts/vazir/Vazir.woff2') format('woff2'),
+  //   url('../webfonts/vazir/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Vazir', tahoma, sans-serif;
+}
+
+#root {
+  direction: rtl;
+  text-align: right;
+}
+
+.font-smaller {
+  font-size: 8pt !important;
+}
+
+.font-small {
+  font-size: 10pt !important;
+}
+
+.font-large {
+  font-size: 12pt !important;
+}
+
+.font-xlarge {
+  font-size: 14pt !important;
+}
+
+.font-xxlarge {
+  font-size: 16pt !important;
+}
+
+.font-xxxlarge {
+  font-size: 18pt !important;
+}
+.font-giant {
+  font-size: 20pt !important;
+}
+
+.font-super-giant {
+  font-size: 24pt !important;
+}
+.text-bold-success{
+  color:#08794f
+}
+.w-20{
+  width: 20% !important;
+}
+.calendarContainer{
+  top:100px !important
+}

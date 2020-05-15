@@ -1,0 +1,14 @@
+:local(.searchLink){
+   margin: 0 ;
+   color: #747474be;
+   direction: ltr  !important;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 80px;
+   display: block;
+   text-align: center;
+}
+:local(.searchLink:hover){
+   color: #747474;
+   font-weight: 500 !important;
+}

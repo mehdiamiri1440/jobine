@@ -1,0 +1,18 @@
+:local(.loadingContainer) {
+  text-align: center;
+  opacity: 0.4;
+  height: 100%;
+}
+
+:local(.loadingProgress) {
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  border-radius: 50%;
+}
+:local(.loadingSpinner){
+  width: 60px;
+  top:20%;
+  position: absolute;
+  height: 60px;
+}

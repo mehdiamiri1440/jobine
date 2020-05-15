@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "IRANSans";
+  src: url("./assets/webfonts/irsans/IRANSansWeb_Bold.eot");
+  src:
+  url("./assets/webfonts/irsans/IRANSansWeb_Bold.woff") format("woff"),
+  url("./assets/webfonts/irsans/IRANSansWeb_Bold.ttf") format("ttf"),
+  }
+.app{
+  direction: rtl !important;
+  font-family: IRARSans;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+.leftSide{
+  float: left !important;
+  text-align: left;
+}
+.centerSide{
+  float: initial;
+  text-align: center;
+  margin: 0 auto !important;
+}
+.rightSide{
+  float: right !important;
+  text-align: right;
+}
+.icon{
+  margin: 5px !important ;
+}
+.w-90{
+  width: 90%;
+}
+.w-95{
+  width: 95%;
+}
+.back-red{
+  background-color: #FF4F4F;
+}
+.font-red{
+  color: #FF4F4F;
+}
