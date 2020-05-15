@@ -1,0 +1,9 @@
+.pointer {
+  cursor: pointer;
+}
+
+.menu-item {
+  &:hover {
+    text-decoration: none;
+  }  
+}

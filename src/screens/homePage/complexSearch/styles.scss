@@ -1,0 +1,86 @@
+:local(.items){
+   position: relative;
+   top:130px;
+   margin : 0 auto;
+}
+:local(.complexComponent .title h1){
+   height: 80px;
+   margin: 10px auto -5px;
+   font-size: 30px;
+   font-weight: 500;
+   color: #ffffff;
+   text-align: center;
+}
+:local(.complex){
+   height: 400px;
+   padding: 5px 20px 20px;
+   line-height: 20px;
+   margin: 0 auto;
+   border-radius: 12px ;
+   background-color: #ffffff;
+   box-shadow: 0px 0px 19px 1px #0000001e;
+   position: relative;
+   z-index: 150;
+   top:-35px;
+}
+:local(.complex input[type=text]){
+   margin: 40px auto;
+   width: 70%;
+   height: 50px;
+   line-height: 50px;
+   font-size: 17px;
+   border: 1px solid #ffffff;
+   border-bottom:2px solid #77777734 !important;
+   text-align: center;
+}
+:local(.complex input[type=text]:focus){
+   outline: none;
+   border-bottom:2px solid #4a519271 !important;
+   border-radius: 10px;
+}
+:local(.complex p){
+   font-size: 15px;
+   font-weight: 600;
+   color: #505050;
+   direction: ltr;
+ }
+:local(.complex input[type=checkbox]:checked + label){
+   color: #FF4F4F !important;
+} 
+:local(.complex .filterCheckBox:not(:disabled):active ~ .filterLabel::before ){
+   color: #fff !important ;
+   background-color: rgba(255, 172, 172, 0.842) !important ;
+   border-color: rgba(255, 183, 183, 0.76) !important ;
+   outline: none !important;
+}
+:local(.complex .filterCheckBox:checked ~ .filterLabel::before ){
+   color: #fff !important ;
+   border-color: #FF4F4F !important ;
+   background-color: #FF4F4F !important ;
+   outline: none  !important ;
+}
+:local(.complex .advantage){
+   margin-top: 30px ;
+}
+:local(.complex .input-range__track--active ){
+   background: #cc2929de;
+}
+// :local(.complex .input-range__slider ){
+//    background: #FF4F4F !important;
+//    border: 1px solid #FF4F4F !important;
+// }
+:local(.filterLabel){
+   position: initial !important;
+   float: right;
+}
+:local(.complex .submitSearch){
+   width: 90px;
+   height: 40px;
+   background-color: #FF4F4F;
+   color: #ffffff;
+   font-size: 21px;
+   border-radius: 20px;
+   border-color: #74747427;
+   display: block;
+   margin: -15px auto !important;
+}

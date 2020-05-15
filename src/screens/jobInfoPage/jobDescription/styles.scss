@@ -1,0 +1,38 @@
+:local(.FullDescription){
+   position: relative;
+   top: 60px;
+   margin: 4vw auto 9vw !important;
+}
+:local(.FullDescription .title p){
+   color: #FF4F4F;
+   font-size: calc(12px + 6 * ((900vw - 320px) / 9080));
+   line-height: 5vw;
+   font-weight: 600;
+   margin: 0;
+   direction: rtl;
+}
+:local(.FullDescription .title p::before){
+content: url('../../../assets/icons/circle.png');
+margin: 0 0 0 10px;
+}
+:local(.FullDescription ol , ul){
+   direction: rtl;
+   text-align: right !important;
+}
+:local(.FullDescription ol li){
+   width: 100%;
+   margin: 1vw 0 0;
+   color: #3C3C3C;
+   font-size: calc(10px + 6 * ((900vw - 320px) / 9080));
+   line-height: 30px;
+   font-weight: 500;
+}
+:local(.FullDescription ul li){
+   list-style: none;
+   width: 100%;
+   margin: 1vw 0 0;
+   color: #3C3C3C;
+   font-size: calc(10px + 6 * ((900vw - 320px) / 9080));
+   line-height: 30px;
+   font-weight: 500;
+}

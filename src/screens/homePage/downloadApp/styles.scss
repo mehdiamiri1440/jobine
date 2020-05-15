@@ -1,0 +1,25 @@
+:local(.downloadAppSection){
+   position: relative;
+   margin: 50px auto 0;
+}
+:local(.downloadAppSection h3){
+   color: #FF4F4F;
+   font-size: 30px;
+   text-align: right;
+   float: left;
+}
+:local(.downloadAppSection p){
+   width: 500px;
+   height: 200px;
+   margin: 25px 5px;
+   line-height: 35px;
+   text-align: right;
+   color: #646464;
+   font-size: 17px;
+   font-weight: 500;
+   direction: rtl;
+}
+:local(.phoneImg img){
+   display: block;
+   float: left !important;
+}

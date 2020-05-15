@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import JobTitle from '../../components/jobTitle';
-import JobDescription from '../../components/jobDescription';
-import JobTag from '../../components/jobTags';
-import SimilarityJob from '../../components/similarityAds';
+import JobTitle from './jobTitle';
+import JobDescription from './jobDescription';
+import JobTag from './jobTags';
+import SimilarityJob from './similarityAds';
 import { connect } from 'react-redux'
 
 class JobInfoPage extends Component {
 
 
    render() {
-      console.log(this.props,'[jobInfo]');
+      console.log(this.props, '[jobInfo]');
 
       return (
          <div className='col-12'>
