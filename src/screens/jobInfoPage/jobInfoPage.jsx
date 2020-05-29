@@ -3,13 +3,12 @@ import JobTitle from './jobTitle';
 import JobDescription from './jobDescription';
 import JobTag from './jobTags';
 import SimilarityJob from './similarityAds';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 class JobInfoPage extends Component {
 
 
    render() {
-      console.log(this.props, '[jobInfo]');
 
       return (
          <div className='col-12'>
@@ -21,7 +20,7 @@ class JobInfoPage extends Component {
                <JobTag {...this.props} />
             </div>
             <div className='row'>
-               <SimilarityJob />
+               <SimilarityJob  {...this.props} />
             </div>
          </div>
       );
@@ -29,7 +28,8 @@ class JobInfoPage extends Component {
 }
 
 const mapStateToProps = (state) => ({
-   data: state.jobInfoPageReducer.job
+   data: state.jobInfoPageReducer.job,
+   similarityJobs: state.jobInfoPageReducer.similarityJobs
 })
 
 export default connect(mapStateToProps)(JobInfoPage);

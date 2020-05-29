@@ -25,7 +25,7 @@ const LocationSearch = () => {
                      padding: 0,
                      overflow: 'hidden',
                      left: '0px',
-                     top: '-200px'
+                     top: '0px'
                   }}
                   token={token}
                   center={[51.34379364705882, 35.74109568627451]}
@@ -35,13 +35,14 @@ const LocationSearch = () => {
          </div>
          <div className={`col-md-10 ${Styles.items}`}>
             <div className={`row ${Styles.title}`} >
-               <h1 className='col-lg-12 col-md-12'>مشاهده زنده مشاغل روی نقشه
-                  </h1>
+               <h1 className='col-lg-12 col-md-12'>
+               {locales('titles.displayJobsOnMap')}
+               </h1>
             </div>
             <div className={`row ${Styles.searchFild}`}>
                <div className='col-lg-2  col-md-3 right-link'>
                   <SearchLink Type='search' >
-                     جستجوی ساده
+                  {locales('titles.goToSimpleSearch')}
                   </SearchLink>
                </div>
                <div className='col-lg-8 col-md-6 '>
@@ -59,13 +60,15 @@ const LocationSearch = () => {
                      </CedarMaps>
                   </div>
                   <div className={`row ${Styles.fullscreen}`}>
-                     <button className={`${Styles.fullscreenBtn}`} onClick={() => setVisible(true)} >نمایش تمام صفحه</button>
+                     <button className={`${Styles.fullscreenBtn}`} onClick={() => setVisible(true)} >
+                     {locales('titles.displayFullScreen')}
+                     </button>
 
                   </div>
                </div>
                <div className='col-lg-2 col-md-3 left-link'>
                   <SearchLink Type='searchFilter'>
-                     جستجوی پیشرفته
+                  {locales('titles.goToFilterSearch')}
                   </SearchLink>
                </div>
             </div>

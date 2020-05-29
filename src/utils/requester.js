@@ -3,6 +3,7 @@ import cookies from 'js-cookie';
 
 const getUrl = route => `${API_ENDPOINT}/${route}`;
 
+
 const getRequestHeaders = withAuth => {
     return {
         'Content-Type': 'application/json; charset=utf-8',
@@ -11,7 +12,7 @@ const getRequestHeaders = withAuth => {
     };
 };
 
-export const fetchAPI = ({ route, method = 'GET', data = {}, withAuth = true, params = null }) => {
+export const fetchAPI = ({ route, method = 'GET', data = {}, withAuth = false, params = null }) => {
     return new Promise((resolve, reject) => {
         axios
             .request({
@@ -23,6 +24,7 @@ export const fetchAPI = ({ route, method = 'GET', data = {}, withAuth = true, pa
             })
             .then(result => {
                 resolve(result.data ? result.data : result);
+                
             })
             .catch(err => {
                 console.error('error in connecting to network', err);

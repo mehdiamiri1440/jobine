@@ -17,43 +17,55 @@ const Footer = () => {
                <div className='col-1'></div>
                <div className='col-4'>
                   <span>
-                     درباره جاب جو
+                  {locales('titles.infoJobjoo')}
                   </span>
                   <p className={`${Styles.text}`}>
-                     جاب جو یک تارنمای پیشرفته برای ثبت و جستجوی مشاغل بر اساس دسته بندی ها و معیارهای متفاوت در شعاع جغرافیایی محدود شده میباشد که در تلاش است تا امکانات مناسبی جهت کاریابی به هموطنان عزیز ارائه نماید .
+                  {locales('titles.infoJobjooText')}
                   </p>
                </div>
                <div className='col-3'>
                   <div className='row'>
                      <span>
-                        لینک های مهم
+                     {locales('titles.importantLinks')}
                   </span>
                   <input type="checkbox" className="custom-control-input" id="customControlValidation1" required/>
 
                   </div>
                   <div className={`row ${Styles.importantLinks}`}>
                      <div className='col-5'>
-                        <Link to='/' className={`${Styles.spicial}`}>صفحه نخست</Link>
+                        <Link to='/' className={`${Styles.spicial}`}>
+                        {locales('titles.goToHomePage')}
+                        </Link>
 
                      </div>
                      <div className='col-5'>
-                        <Link to='/'>پشتیبانی</Link>
+                        <Link to='/'>
+                        {locales('titles.support')}
+                        </Link>
 
                      </div>
                      <div className='col-5'>
-                        <Link to='/'>ورود / ثبت نام</Link>
+                        <Link to='/'>
+                        {locales('titles.signUp/login')}
+                        </Link>
 
                      </div>
                      <div className='col-5'>
-                        <Link to='/'>تماس با ما</Link>
+                        <Link to='/'>
+                        {locales('titles.contactUs')}
+                        </Link>
 
                      </div>
                      <div className='col-5'>
-                        <Link to='/'>راهنما</Link>
+                        <Link to='/'>
+                        {locales('titles.guide')}
+                        </Link>
 
                      </div>
                      <div className='col-5'>
-                        <Link to='/'>درباره ما</Link>
+                        <Link to='/'>
+                        {locales('titles.aboutUs')}
+                        </Link>
 
                      </div>
                   </div>
@@ -79,7 +91,7 @@ const Footer = () => {
                   تمامی حقوق برای جاب جو محفوظ است . ۱۳۹۷
                </p>
                <div className='col-3'></div>
-               <div className={`col-4 ${Styles.socialLinks}`}>
+               <div className={`col-3 ${Styles.socialLinks}`}>
                   <Link to='/'>
                      <img alt='facebook-icon' src={facebook} width="35px" height='35px' />
                   </Link>

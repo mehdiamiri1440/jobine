@@ -9,6 +9,7 @@ import './assets/libraries/fontawesome/fontawesome.css';
 import './assets/libraries/fontawesome/regular';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/styles/index.scss';
+import './assets/styles/_antd.rtl.scss';
 
 locales.setActiveLanguage('fa-ir');
 global.locales = locales.localize;

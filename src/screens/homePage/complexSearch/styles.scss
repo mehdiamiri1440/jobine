@@ -5,7 +5,7 @@
 }
 :local(.complexComponent .title h1){
    height: 80px;
-   margin: 10px auto -5px;
+   margin: 0px auto 35px;
    font-size: 30px;
    font-weight: 500;
    color: #ffffff;
@@ -33,11 +33,6 @@
    border-bottom:2px solid #77777734 !important;
    text-align: center;
 }
-:local(.complex input[type=text]:focus){
-   outline: none;
-   border-bottom:2px solid #4a519271 !important;
-   border-radius: 10px;
-}
 :local(.complex p){
    font-size: 15px;
    font-weight: 600;
@@ -62,13 +57,15 @@
 :local(.complex .advantage){
    margin-top: 30px ;
 }
-:local(.complex .input-range__track--active ){
+.input-range__track--active {
    background: #cc2929de;
 }
-// :local(.complex .input-range__slider ){
-//    background: #FF4F4F !important;
-//    border: 1px solid #FF4F4F !important;
-// }
+.InputRangeComponent span{
+   direction: rtl;
+}
+.input-range__track--active{
+   position: absolute;
+}
 :local(.filterLabel){
    position: initial !important;
    float: right;
@@ -82,5 +79,6 @@
    border-radius: 20px;
    border-color: #74747427;
    display: block;
-   margin: -15px auto !important;
+   margin: -30px auto 0 !important;
 }
+

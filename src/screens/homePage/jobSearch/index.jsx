@@ -12,7 +12,7 @@ const Search = (props) => {
    const renderSearchComponents = () => {
       if (props.location.pathname === '/') {
          return (
-            <SimpleSearchComponent />
+            <SimpleSearchComponent tally={props.tally}  />
          )
       } else if (props.location.pathname === '/searchFilter') {
          return (
@@ -24,6 +24,7 @@ const Search = (props) => {
          )
       }
    }
+console.log(props, '[jobsearch]');
 
 
    return (

@@ -2,32 +2,26 @@ import React from 'react';
 import Styles from './styles.scss';
 
 import jobTitleBackG from '../../../assets/icons/jobInfoHeader.png'
-import jobAvatar from '../../../assets/icons/avatar.png'
 import starOn from '../../../assets/icons/starIcon.png'
 import starOff from '../../../assets/icons/StaroffIcon.png'
 
 
 const JobHeader = (props) => {
-   let data = {
-      title: 'استخدام طراح رابط کاربری',
-      name: 'علی بابا',
-      class: 'فناوری اطلاعات ',
-      marked: false,
-      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkNJNKx1SFWqT146hNch69uCGHebEdX8QhBGfmpg5hQfnq_a8E&usqp=CAU'
-   }
 
    let handleMarker = (markerState) => {
       if (markerState) {
          return (
             <button className={`row ${Styles.marker}`}>
                <img alt='star' className={`icon`} src={starOn} width="15px" />
-               نشان شده
+               
+               {locales('titles.marked')}
             </button>
          )
       } else {
          return (
             <button onClick={handleToggleMarker} className={` ${Styles.noMarke} `} id='marker'>
-               نشان کردن
+               
+               {locales('titles.mark')}
                <img alt='star' className='icon' src={starOff} width="12px" />
             </button>
          )
@@ -47,23 +41,24 @@ const JobHeader = (props) => {
             <div className={`col-8 ${Styles.titleJob}`}>
                <div className='row'>
                   <div className='col-3'>
-                     <img alt='avatar' className={`${Styles.avatar}`} src={data.avatar} width="70%" />
+                     <img alt='avatar' className={`${Styles.avatar}`} src={props.data.avatar} width="70%" />
                   </div>
                   <div className='col-8'>
-                     <h1 className='row'>{data.title} </h1>
+                     <h1 className='row'>{props.data.jobTitle} </h1>
                      <div className='row'>
-                        <p>{data.name}</p>/
-                           <i><small> {data.class} </small></i>
+                        <p>{props.data.company}</p>/
+                           <i><small> {props.data.class} </small></i>
                      </div>
 
-                     {handleMarker(data.marked)}
+                     {handleMarker(props.data.marked)}
                   </div>
                </div>
             </div>
             <div className='col-4 col-lg-3'>
                <button className={`back-red ${Styles.btnCv}`}>
                   <p>
-                     ورود و ارسال رزومه
+                     
+                     {locales('titles.sendresume')}
                      </p>
                </button>
             </div>

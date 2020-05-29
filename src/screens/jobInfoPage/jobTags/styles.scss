@@ -4,6 +4,9 @@
    top: 100px;
    margin: 4vw auto 5vw !important;
 }
+:local(.tagsDescription .tags){
+   margin-bottom: 20px;
+}
 :local(.tagsDescription .tag){
    color: #ffffff;
    background-color: #FF4F4F;
@@ -12,7 +15,6 @@
    margin: 5px ;
    padding: 0 5px;
    line-height: 20px;
-   font-weight: 500;
 }
 :local(.tagsDescription .row){
    margin-bottom: 1.5vw ;

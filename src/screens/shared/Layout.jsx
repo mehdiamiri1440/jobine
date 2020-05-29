@@ -11,12 +11,14 @@ class Layout extends Component {
       <Fragment>
         <Header {...this.props} />
         <div className="col-12 d-flex main-content p-0">
-          <div className="col-2 border-left p-0 menu-bg">
+          {/* <div className="col-2 border-left p-0 menu-bg">
             <SideMenu />
           </div>
-          <div className="col-10">
-            <AppRouter />
-          </div>
+          <div className="col-10"> 
+            <div className="row">*/}
+              <AppRouter />
+            {/* </div>
+          </div> */}
         </div>
         <Footer {...this.props} />
       </Fragment>

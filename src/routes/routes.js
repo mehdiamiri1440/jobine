@@ -1,6 +1,7 @@
 import ChangePassword from '../screens/changePassword/changePassword';
 import HomePage from '../screens/homePage/homePage';
 import JobInfoPage from '../screens/jobInfoPage/jobInfoPage';
+import Dashboard from '../screens/dashboard';
 
 export const routes = [
  {
@@ -26,6 +27,11 @@ export const routes = [
   {
     path: '/jobInfo',
     component: JobInfoPage,
+    exact: true
+  },
+  {
+    path: '/profile/dashboard',
+    component: Dashboard,
     exact: true
   },
 ];

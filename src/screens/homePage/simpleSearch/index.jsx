@@ -4,54 +4,76 @@ import SearchLink from '../searchLink';
 import Styles from './styles.scss';
 
 
-const SimpleSearch = () => {
+const SimpleSearch = (props) => {
 
    return (
       <section className={`row ${Styles.simpleSearch}`}>
          <div className={`col-md-10 ${Styles.items}`}>
             <div className={`row ${Styles.title}`} >
-               <h1 className='col-lg-12 col-md-12'>شغل رویایی خودت رو پیدا کن</h1>
+               <h1 className='col-lg-12 col-md-12'>
+                  {locales('titles.findYourJob')}
+               </h1>
             </div>
             <div className={`row ${Styles.searchFild}`}>
                <div className='col-lg-2  col-md-3 right-link' >
                   <SearchLink Type='location'>
-                     مشاغل روی نقشه
+                     {locales('titles.jobsInMap')}
                   </SearchLink>
                </div>
                <div className='col-lg-8 col-md-6 '>
                   <div className={`${Styles.simple}`}>
-                     <input type='text' placeholder='عنوان شغلی ، کلمات کلیدی یا نام شرکت' />
-                     <button className={`${Styles.submitSearch}`}>بگرد</button>
+                     <input type='text' placeholder={locales('titles.jobTitleOrNameOfCompany')} />
+                     <button className={`${Styles.submitSearch}`}>
+                     {locales('titles.search')} 
+                     </button>
                   </div>
                </div>
                <div className='col-lg-2 col-md-3 left-link'>
                   <SearchLink Type='searchFilter' >
-                     جستجوی پیشرفته
+                  {locales('titles.goToFilterSearch')}
                   </SearchLink>
                </div>
             </div>
             <div className={`row ${Styles.tally}`}>
                <div className='col-lg-3 col-md-3 border-left'>
-                  <p>۲۴۳۴</p>
-                  <span>عنوان شغلی</span>
+                  <p>
+                     {props.tally.numberOfJobTitle}
+                  </p>
+                  <span>
+                  {locales('titles.jobTitle')}
+                  </span>
                </div>
                <div className='col-lg-3 col-md-3 border-left'>
-                  <p>۸۹۴</p>
-                  <span> کارفرمای ثبت شده</span>
+                  <p>
+                     {props.tally.numberOfRegisteredEmployer}
+                  </p>
+                  <span> 
+                  {locales('titles.registeredEmployer')}
+                     </span>
                </div>
                <div className='col-lg-3 col-md-3 border-left'>
-                  <p>۸۴۳۹</p>
-                  <span>کارجوی ثبت شده </span>
+                  <p>
+                     {props.tally.numberOfRegisteredApplicant}
+                  </p>
+                  <span>
+                  {locales('titles.registeredApplicant')}
+                     </span>
                </div>
                <div className='col-lg-3 col-md-3'>
-                  <p>۴۲۳</p>
-                  <span>استخدام موفق </span>
+                  <p>
+                     {props.tally.numberOfSuccessfulEmployment}
+                  </p>
+                  <span>
+                  {locales('titles.successfulEmployment')}
+                      </span>
                </div>
             </div>
          </div>
          <div className={`row ${Styles.employer}`}>
             <div className='col-lg-12 col-md-12'>
-               <Link to='/'>کارفرما هستم</Link>
+               <Link to='/'>
+               {locales('titles.iAmEmployer')}
+               </Link>
             </div>
          </div>
 

@@ -57,12 +57,16 @@
    line-height: 45px;
    width: 70%;
    color: #606060;
-
+   text-align: center;
 }
 :local(.socialLinks){
    direction: ltr;
    height: 35px;
    margin: 5px 0;
+}
+:local(.socialLinks a){
+   display: block;
+   float: left;
 }
 :local(.footer .subFooter img){
    margin: 0 5px;

@@ -1,0 +1,77 @@
+:local(.signup-background){
+    background-image: url('../../../assets/images/signup-background.png');
+   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+:local(.signup-form){
+    width: 30%;
+    height: 45%;
+}
+:local(.send-code-button){
+    position: relative;
+    bottom: 20px;
+}
+
+
+:local(.header){
+   width: 100%;
+   height:70px;
+   position: fixed;
+   z-index: 200;
+   background-color: #ffffff;
+   box-shadow: 0px 2px 19px 2px #0000001e;
+}
+:local(.logo p){
+   height: 40px;
+   margin: 15px 0;
+   padding: 0px 1vw 0 0;
+   color: #FF4F4F;
+   font-size: 28px;
+   line-height: 45px;
+   font-weight: 400;
+   border-left: 1px solid rgba(255, 79, 79, 0.705) ;
+}
+:local(.SearchJob a){
+   height: 40px;
+   margin: 5px 0;
+   position: relative;
+   right: 0px !important ;
+   color: #FF4F4F;
+   font-size: calc(9px + 6 * ((900vw - 320px) / 10080));
+   line-height: 70px;
+}
+:local(.SearchJob){
+   padding: 0 5px;
+}
+:local(.logo){
+   padding: 0;
+}
+:local(.left){
+   position: absolute !important;
+   left: 0px !important ;
+   direction: ltr;
+}
+:local(.right){
+   position: absolute !important;
+   right: 0px !important ;
+   direction: rtl;
+}
+:local(.left div div ){
+   position: relative;
+   left: 0px !important ;
+   
+}
+:local(.left a){
+   direction: ltr  !important;
+   color: #747474be;
+   font-size: 13px;
+   line-height:70px;
+   font-weight: 500;
+}
+:local(.left a:hover){
+   color: #747474;
+}

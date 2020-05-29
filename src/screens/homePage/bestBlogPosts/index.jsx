@@ -45,15 +45,15 @@ const BestPost = () => {
             <div className={`col-lg-9 col-md-9`}>
 
                <p className={`${Styles.title}`}>
-                  خواندنی های مورد نیاز از وبلاگ
+               {locales('titles.reguiredReadingsFromBlog')}
                </p>
                <span>
-                  جاب جو
+               {locales('titles.jobjoo')}
                </span>
             </div>
             <div className={`col-lg-3 col-md-3`}>
                <Link to='/' className={`${Styles.seeAll}`}>
-                  مشاهده همه
+               {locales('titles.seeAll')}
                </Link>
             </div>
          </div>

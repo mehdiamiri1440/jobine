@@ -1,108 +1,143 @@
 import React, { useState } from 'react';
 import InputRange from 'react-input-range';
+import 'react-input-range/lib/css/index.css';
 import SearchLink from '../searchLink';
 
 import Styles from './styles.scss';
 
 const ComplexSearch = () => {
 
-   const [val, setVal] = useState({ min: 3, max: 5 })
+   const [val, setVal] = useState({ min: 4500000, max: 6500000 })
 
    return (
-      <section className={`row ${Styles.complexComponent}`}>
-         <div className={`col-md-10 ${Styles.items}`}>
-            <div className={`row ${Styles.title}`} >
-               <h1 className={'col-lg-12 col-md-12'}>جستجوی حرفه ای مشاغل</h1>
-            </div>
-            <div className={`row searchFild`}>
-               <div className={`col-lg-2  col-md-3 right-link`} >
-                  <SearchLink Type='location' >
-                     مشاغل روی نقشه
-                  </SearchLink>
+      <section className={`col-12`}>
+         <div className={`row ${Styles.complexComponent}`}>
+            <div className={`col-md-10 ${Styles.items}`}>
+               <div className={`row ${Styles.title}`} >
+                  <h1 className={'col-lg-12 col-md-12'}>
+                     {locales('titles.advancedSearch')}
+                  </h1>
                </div>
-               <div className='col-lg-8 col-md-6'>
-                  <div className={`row ${Styles.complex}`}>
-                     <div className='col-12'>
-                        <div className='row'>
-                           <input type='text' placeholder='عنوان شغلی ، کلمات کلیدی یا نام شرکت' />
-                        </div>
-                        <div className='row'>
-                           <p className='col-2'>:نوع استخدام</p>
-                           <div className=" col-2 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck1" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck1">تمام وقت</label>
+               <div className={`row searchFild`}>
+                  <div className={`col-lg-2  col-md-3 right-link`} >
+                     <SearchLink Type='location' >
+                        {locales('titles.jobsOnMap')}
+                     </SearchLink>
+                  </div>
+                  <div className='col-lg-8 col-md-6'>
+                     <div className={`row ${Styles.complex}`}>
+                        <div className='col-12'>
+                           <div className='row'>
+                              <input type='text' placeholder={locales('titles.jobTitleOrNameOfCompany')} />
                            </div>
-                           <div className=" col-2 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck2" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck2"> پاره وقت</label>
+                           <div className='row'>
+                              <p className='col-2'>
+                                 {locales('titles.typeOfEmployment')}
+                              </p>
+                              <div className=" col-2 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck1" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck1">
+                                    {locales('titles.fullTime')}
+                                 </label>
+                              </div>
+                              <div className=" col-2 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck2" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck2">
+                                    {locales('titles.partTime')}
+                                 </label>
+                              </div>
+                              <div className=" col-2 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck3" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck3">
+                                    {locales('titles.teleworking')}
+                                 </label>
+                              </div>
+                              <div className=" col-2 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck4" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck4">
+                                    {locales('titles.training')}
+                                 </label>
+                              </div>
+                              <div className=" col-2 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck5" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck5">
+                                    {locales('titles.project')}
+                                 </label>
+                              </div>
                            </div>
-                           <div className=" col-2 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck3" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck3">  دورکاری </label>
+                           <div className={`row ${Styles.advantage}`}>
+                              <p className='col-2'>
+                                 {locales('titles.project')}
+                              </p>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck6" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck6">
+                                    {locales('titles.insurance')}
+                                 </label>
+                              </div>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck7" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck7">
+                                    {locales('titles.overTimeWork')}
+                                 </label>
+                              </div>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck8" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck8">
+                                    {locales('titles.vacation')}
+                                 </label>
+                              </div>
+                              <div className='col-2'></div>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck9" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck9">
+                                    {locales('titles.travelService')}
+                                 </label>
+                              </div>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck10" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck10">
+                                    {locales('titles.residence')}
+                                 </label>
+                              </div>
+                              <div className=" col-3 custom-control custom-checkbox">
+                                 <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck11" />
+                                 <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck11">
+                                    {locales('titles.foodService')}
+                                 </label>
+                              </div>
                            </div>
-                           <div className=" col-2 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck4" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck4"> کار آموزی</label>
+                           <div className='row mt-5 mb-5'>
+                              <div className='col-lg-2  col-md-3 '>
+                                 <div className='row'>
+                                    <p>
+                                       {locales('titles.salary')}
+                                    </p>
+                                 </div>
+                              </div>
+                              <div className='col-lg-10 col-md-9 '>
+                                 <InputRange
+                                    maxValue={10000000}
+                                    minValue={2000000}
+                                    formatLabel={value => `${value} T`}
+                                    value={val}
+                                    onChange={value => setVal({ min: value.min, max: value.max })} />
+                              </div>
                            </div>
-                           <div className=" col-2 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck5" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck5"> پروژه ای</label>
-                           </div>
-                        </div>
-                        <div className={`row ${Styles.advantage}`}>
-                           <p className='col-2'>:مزایای شغلی </p>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck6" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck6"> بیمه تامین اجتماعی</label>
-                           </div>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck7" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck7"> اضافه کاری</label>
-                           </div>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck8" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck8">  مرخصی متعارف </label>
-                           </div>
-                           <div className='col-2'></div>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck9" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck9"> سرویس رفت و آمد</label>
-                           </div>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck10" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck10">  محل اسکان</label>
-                           </div>
-                           <div className=" col-3 custom-control custom-checkbox">
-                              <input type="checkbox" className={`custom-control-input ${Styles.filterCheckBox}`} id="customCheck11" />
-                              <label className={`custom-control-label ${Styles.filterLabel}`} htmlFor="customCheck11"> سرویس تغذیه </label>
-                           </div>
-                        </div>
-                        <div className='row mt-5 mb-5'>
+                           <div className='row'>
+                              <button className={`${Styles.submitSearch}`}>
+                                 {locales('titles.search')}
+                              </button>
 
-                           <p className='col-4'>: حقوق مورد نظر </p>
-                           <div className='col-7'>
-
-                              <InputRange
-                                 draggableTrack
-                                 maxValue={10}
-                                 minValue={1}
-                                 value={val}
-                                 htmlFormatLabel={value => `${value} Rials`}
-                                 onChange={(value) => setVal({ min: value.min, max: value.max })} />
-
                            </div>
-                        </div>
-                        <div className='row'>
-                           <button className={`${Styles.submitSearch}`}>بگرد</button>
-
                         </div>
                      </div>
                   </div>
-               </div>
-               <div className={`col-lg-2 col-md-3 left-link`}>
-                  <SearchLink Type='search' >
-                     جستجوی ساده
+                  <div className={`col-lg-2 col-md-3 left-link`}>
+                     <SearchLink Type='search' >
+                     {locales('titles.simpleSearch')}
                   </SearchLink>
+                  </div>
                </div>
             </div>
          </div>

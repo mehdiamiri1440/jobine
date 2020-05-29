@@ -1,27 +1,17 @@
 @font-face {
-  font-family: 'Vazir';
-  src: url('../webfonts/vazir/Vazir-FD.eot');
-  src: url('../webfonts/vazir/Vazir-FD.eot?#iefix') format('embedded-opentype'),
-      url('../webfonts/vazir/Vazir-FD.woff') format('woff'),
-    url('../webfonts/vazir/Vazir-FD.woff2') format('woff2'),
-    url('../webfonts/vazir/Vazir-FD.ttf') format('truetype');
-  // src: url('../webfonts/vazir/Vazir.eot');
-  // src: url('../webfonts/vazir/Vazir.eot?#iefix') format('embedded-opentype'),
-  //   url('../webfonts/vazir/Vazir.woff') format('woff'),
-  //   url('../webfonts/vazir/Vazir.woff2') format('woff2'),
-  //   url('../webfonts/vazir/Vazir.ttf') format('truetype');
-  font-weight: normal;
-}
-
+  font-family: "IRANSans";
+  src: url("../webfonts/irsans/IRANSansWeb_Bold.eot");
+  src:
+  url("../webfonts/irsans/IRANSansWeb_Bold.woff") format("woff"),
+  url("../webfonts/irsans/IRANSansWeb_Bold.ttf") format("ttf");
+  
+  }
 html,
 body {
   margin: 0;
+  direction: rtl !important;
+  font-family: 'IRANSans', tahoma, sans-serif !important;
   padding: 0;
-}
-
-body {
-  background-color: #fff;
-  font-family: 'Vazir', tahoma, sans-serif;
 }
 
 #root {
@@ -67,4 +57,73 @@ body {
 }
 .calendarContainer{
   top:100px !important
+}
+.curved-border{
+  border-radius: 22px !important;
+}
+.is-invalid{
+  border: 1px solid #dc3545 !important;
+}
+.rc-date-input.is-invalid,
+.rc-dropdown.is-invalid {
+  border: 1px solid #dc3545 !important;
+}
+.ant-input{
+  border-radius: 22px !important;
+}
+.invalid-feedback.is-invalid-feedback,
+.was-validated .rc-dropdown:invalid ~ .invalid-feedback,
+.was-validated .rc-dropdown:invalid ~ .invalid-tooltip, 
+.rc-dropdown.is-invalid ~ .invalid-feedback,
+.rc-dropdown.is-invalid ~ .invalid-tooltip {
+  display: inline list-item !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+.leftSide{
+  float: left !important;
+  text-align: left;
+}
+
+.center{
+  float: initial;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+.rightSide{
+  float: right !important;
+  text-align: right;
+}
+.icon{
+  margin: 5px !important ;
+}
+.w-90{
+  width: 90%;
+}
+.w-95{
+  width: 95%;
+}
+.back-red{
+  background-color: #FF4F4F;
+}
+.font-red{
+  color: #FF4F4F;
 }

@@ -13,9 +13,11 @@ const DownloadApp = () => {
          <div className='row'>
             <div className='col-lg-6 col-md-6'>
                <div className='row'>
-                  <h3>دریافت اپلیکیشن جاب جو</h3>
+                  <h3>
+                  {locales('titles.downloadApplication')}
+                  </h3>
                   <p>
-                     به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه  طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شد.
+                  {locales('titles.infoJobjooText')}
                   </p>
                </div>
                <div className='row'>

@@ -7,7 +7,7 @@ const Description = (props) => {
       <section className={`col-8 ${Styles.FullDescription}`}>
          <div className={`row ${Styles.title}`}>
             <p>
-               شرح موقعیت شغلی
+            {locales('titles.jobDescription')}
                </p>
          </div>
          <ol className={`row ${Styles.desc}`}>
@@ -22,7 +22,7 @@ const Description = (props) => {
 
          <div className={`row ${Styles.title}`}>
             <p>
-               وظایف و مسئولیت ها
+               {locales('titles.dutiesAndResponsibilities')}
                </p>
          </div>
          <ol className={`row ${Styles.desc}`}>
@@ -37,31 +37,36 @@ const Description = (props) => {
 
          <div className={`row ${Styles.title}`}>
             <p>
-               حداقل ويژگی های مورد نیاز
+               {locales('titles.dutiesAndResponsibilities')}
                </p>
          </div>
          <ul className={`row ${Styles.desc}`}>
             <li>
-               حداقل مدرک تحصیلی : {props.data.makinge.diploma}
+               {locales('titles.diploma')}
+                : {props.data.makinge.diploma}
             </li>
             <li>
-               حداقل سابقه کار : {props.data.makinge.experience}
+               {locales('titles.workExperience')}
+                : {props.data.makinge.experience}
             </li>
 
          </ul>
 
          <div className={`row ${Styles.title}`}>
             <p>
-               اطلاعات تماس
+               
+               {locales('titles.dutiesAndResponsibilities')}
                </p>
          </div>
          <ul className={`row ${Styles.desc}`}>
 
             <li>
-               شماره تماس واحد منابع انسانی : {props.data.contact.phone}
+            {locales('titles.contactOperator')}
+                : {props.data.contact.phone}
             </li>
             <li>
-               آدرس : {props.data.contact.address}
+            {locales('titles.address')}
+               : {props.data.contact.address}
             </li>
          </ul>
       </section>
