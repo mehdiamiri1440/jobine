@@ -5,8 +5,8 @@ import Styles from './styles.scss';
 const SignUpHeader = _ => {
 
     return (
-        <header className='col-12'>
-            <div className={`${Styles.header} row`}>
+        <header className='col-12 my-4 my-md-0'>
+            <div className={`${Styles.header} row d-none d-md-block`}>
                 <div className={`col-3 col-lg-4 col-md-4  ${Styles.right}`}>
                     <div className='row pointer'>
                         <div className={`col-5 col-lg-4 col-md-5 ${Styles.logo}`}>
@@ -34,6 +34,14 @@ const SignUpHeader = _ => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="d-md-none">
+                <h5 className={`${Styles["text-primary"]} font-weight-bold text-center`}>
+                    جابجو
+                </h5>
+                <small className={`${Styles["text-primary"]} col-12 d-block text-center`}>
+                    موتور جستجوی مشاغل
+                </small>
             </div>
         </header>
     );

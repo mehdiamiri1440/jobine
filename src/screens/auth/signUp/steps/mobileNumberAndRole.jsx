@@ -96,18 +96,19 @@ const MobileNumberAndRole = props => {
     return (
         <>
             {/* signup form  */}
-            <div className={`${styles['signup-form']} rounded p-4 bg-white`}>
-                <div className='text-center my-3'>{locales('titles.validMobileNumber')}</div>
+            <div className={`${styles['signup-form']} rounded py-4 px-md-4 bg-white`}>
+                <div className='text-center my-3 d-none d-md-block'>{locales('titles.validMobileNumber')}</div>
+                <div className='text-center my-2 font-weight-bold d-md-none'>{locales('titles.mobileNumber')}</div>
                 <Input id='mobileNumber' name='mobileNumber'
                     value={mobileNumber} onChange={onMobileNumberChanged}
                     className={`invalid-feedback ${!!mobileNumberInputError ? 'is-invalid' : ''} curved-border`} />
                 <div className={`invalid-feedback ${!!mobileNumberInputError ? 'is-invalid-feedback' : ''}`}>
                     {mobileNumberInputError}
                 </div>
-                <div className='text-center my-3'>{locales('titles.password')}</div>
+                <div className='text-center my-3 d-none d-md-block'>{locales('titles.password')}</div>
                 <Input.Password id='password' name='password'
                     value={password} onChange={onPasswordChanged}
-                    className={`invalid-feedback ${!!passwordInputError ? 'is-invalid' : ''} curved-border`} />
+                    className={`invalid-feedback d-none d-md-block ${!!passwordInputError ? 'is-invalid' : ''} curved-border`} />
                 <div className={`invalid-feedback ${!!passwordInputError ? 'is-invalid-feedback' : ''}`}>
                     {passwordInputError}
                 </div>
@@ -132,14 +133,15 @@ const MobileNumberAndRole = props => {
                 <div className={`invalid-feedback ${!!roleInputError ? 'is-invalid-feedback' : ''}`}>
                     {roleInputError}
                 </div>
+                <div className="text-center d-md-none my-4">کد فعال سازی به برای شما ارسال خواهد شد.</div>
             </div>
 
-            <div className='d-flex justify-content-center w-25'>
-                <button onClick={saveForm}
-                    className={`${styles['send-code-button']} btn btn-primary font-weight-bold curved-border  w-50`}>{locales('titles.sendConfirmationCode')}</button>
+            <div className='d-flex justify-content-center w-100 w-md-75 m-auto'>
+                <button onClick={saveForm} className={`${styles['send-code-button']} btn btn-primary font-weight-bold curved-border w-50 d-none d-md-block`}>{locales('titles.sendConfirmationCode')}</button>
+                <button onClick={saveForm} className={`${styles['send-code-button']} btn btn-primary w-100 d-md-none`}>{locales('titles.login')}</button>
             </div>
 
-            <Link to='/login'>
+            <Link to='/login' className="d-none d-md-block">
                 <footer className='text-white btn-link my-5 pointer'>{locales('titles.goToLogin')}</footer>
             </Link>
             {/* end of signup form */}

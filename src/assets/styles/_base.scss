@@ -127,3 +127,9 @@ a:hover{
 .font-red{
   color: #FF4F4F;
 }
+
+@media (max-width: 767.9px){
+  body{
+    background-color: #f7f7f7 !important;
+  }
+}

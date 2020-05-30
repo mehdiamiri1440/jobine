@@ -1,16 +1,17 @@
 :local(.signup-background){
-    background-image: url('../../../assets/images/signup-background.png');
+   background-image: url('../../../assets/images/signup-background.png');
    background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  background-color: black;
+   background-position: center;
+   background-size: cover;
+   height: 650px;
+   width: 100%;
+   background-color: black;
 }
-:local(.signup-form){
-    width: 30%;
-    height: 45%;
+
+:local(.signup-background) > div {
+   width: 420px;
 }
+
 :local(.send-code-button){
     position: relative;
     bottom: 20px;
@@ -74,4 +75,38 @@
 }
 :local(.left a:hover){
    color: #747474;
+}
+@media (max-width: 767.9px){
+   :local(.text-primary){
+      color: #ff4f4f;
+   }
+   :local(.signup-form){
+      border-top: 1px solid #dee2e6;
+   }
+   :local(.signup-background){
+      background: #fff;
+      height: auto;
+      width: 100%;
+   }
+   :local(.signup-background) > div {
+      border-top: 1px solid #dee2e6;
+      border-bottom: 1px solid #dee2e6;
+}
+   
+   :local(.signup-header){
+      width: max-content;
+      border-bottom: 1px solid #ff4f4f;
+      margin: auto;
+      font-size: 0.8rem;
+      padding-bottom: 0.5rem;
+   }
+   :local(.send-code-button){
+      bottom: 0;
+  }
+  :local(.signup-back-button){
+     width: 100%;
+     padding: 0.75rem;
+     text-align: center;
+     color: #ff4f4f;
+  }
 }

@@ -41,7 +41,7 @@ const SignUp = props => {
     }
 
     const renderSteps = _ => {
-        switch (step) {
+        switch (2) {
             case 1: {
                 return <MobileNumberAndRole sendVerificationCode={sendVerificationCode} />
             };
@@ -57,17 +57,24 @@ const SignUp = props => {
         <>
             <SignUpHeader />
             <Spin tip={locales('titles.loading')} size='large' spinning={sendVerificationCodeLoading}>
-                <section className={`d-flex flex-column justify-content-center align-items-center ${styles['signup-background']}`}>
+                <section className={`d-flex justify-content-center align-items-center ${styles['signup-background']}`}>
+                    <div className="col-md-auto col-12 py-3">
 
-                    {/* header text */}
-                    <h1 className='text-white font-weight-bold'>{locales('titles.registerInJobjoo')}</h1>
-                    {hasError && <div className="alert alert-danger">
-                        {locales("messages.mobileNumberExist")}
-                    </div>}
-                    {/* end of header text */}
+                        {/* header text */}
+                        <h1 className='text-white text-center font-weight-bold d-none d-md-block'>{locales('titles.registerInJobjoo')}</h1>
+                        <h6 className={`${styles['signup-header']} text-center d-md-none`}>{locales('titles.signup')}</h6>
+                        {hasError && <div className="alert alert-danger">
+                            {locales("messages.mobileNumberExist")}
+                        </div>}
+                        {/* end of header text */}
 
-
-                    {renderSteps()}
+                        {renderSteps()}
+                    </div>
+                </section>
+                <section className={`${styles['signup-back-button']} bg-white border-top border-bottom my-3 d-md-none`}>
+                    <div>
+                        بازگشت
+                    </div>
                 </section>
             </Spin>
         </>

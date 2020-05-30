@@ -69,7 +69,7 @@ const EnterVerificationCode = props => {
     return (
         <>
             {/* signup form  */}
-            <div className={`${styles['signup-form']} rounded p-4 bg-white`}>
+            <div className={`${styles['signup-form']} rounded py-4 px-md-4 bg-white`}>
                 <Spin spinning={validateVerificationCodeLoading}>
                     <div className='text-center my-3'>{locales('titles.enterVerificationCode')}</div>
                     <Input id='verificationCode' name='verificationCode'
@@ -78,7 +78,7 @@ const EnterVerificationCode = props => {
                     <div className={`invalid-feedback ${!!verificationCodeInputError ? 'is-invalid-feedback' : ''}`}>
                         {verificationCodeInputError}
                     </div>
-                    <div className='my-3 d-flex justify-content-center align-items-center'>
+                    <div className='my-md-3 mt-3 d-flex justify-content-center align-items-center'>
                         <Timer
                             min={2}
                             sec={0}
@@ -90,18 +90,24 @@ const EnterVerificationCode = props => {
                             substitutionText={locales('titles.sendCodeAgain')}
                         />
                     </div>
-                    <span className='d-flex justify-content-center'>{locales('labels.onNumber', { fieldName: props.mobileNumber })}</span>
+                    <span className='justify-content-center d-none d-md-flex'>{locales('labels.onNumber', { fieldName: props.mobileNumber })}</span>
+                    <div className="d-flex justify-content-center">
+                        <small className='d-flex justify-content-center d-md-none'>{locales('titles.mobileNumber', { fieldName: props.mobileNumber })}</small>
+                        <small>تغییر شماره موبایل</small>
+                    </div>
 
                 </Spin>
             </div>
 
-            <div className='d-flex justify-content-center w-25'>
+            <div className='justify-content-center mt-4 m-md-0 w-100 w-md-75 d-md-flex'>
                 <button onClick={saveForm}
-                    className={`${styles['send-code-button']} btn btn-primary font-weight-bold curved-border  w-50`}>{locales('titles.approve')}</button>
+                    className={`${styles['send-code-button']} btn btn-primary font-weight-bold curved-border w-50 d-none d-md-block`}>{locales('titles.approve')}</button>
+                <button onClick={saveForm}
+                    className={`${styles['send-code-button']} btn btn-primary w-100 d-md-none`}>{locales('titles.login')}</button>
             </div>
 
             <footer onClick={() => props.changeStep(1)}
-                className='text-white btn-link my-5 pointer'>{locales('titles.goToPrevStep')}</footer>
+                className='text-white btn-link my-5 pointer d-none d-md-block'>{locales('titles.goToPrevStep')}</footer>
             {/* end of signup form */}
         </>
     )
