@@ -1,4 +1,12 @@
 @import '../../assets/styles/variables';
 :local(.bg-color){
-    background-color: red;
+    background-color: #F9FAFC;
+    min-height: 90vh;
+}
+:local(.complete-profile-header){
+    color:#60605F;
+}
+:local(.send-code-button){
+    position: relative;
+    bottom: -18px;
 }

@@ -3,8 +3,10 @@ import AppRouter from '../../routes/router';
 import SideMenu from '../../components/sideMenu';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-class Layout extends Component {
 
+
+const footerHiddenRoutes = ['/profile/dashboard']
+class Layout extends Component {
 
   render() {
     return (
@@ -16,11 +18,11 @@ class Layout extends Component {
           </div>
           <div className="col-10"> 
             <div className="row">*/}
-              <AppRouter />
-            {/* </div>
+          <AppRouter />
+          {/* </div>
           </div> */}
         </div>
-        <Footer {...this.props} />
+        {footerHiddenRoutes.indexOf(this.props.history.location.pathname) < 0 && <Footer {...this.props} />}
       </Fragment>
     );
   }

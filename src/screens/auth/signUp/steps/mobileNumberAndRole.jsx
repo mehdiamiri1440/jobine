@@ -6,7 +6,7 @@ import styles from '../styles.scss';
 import ENUMS from '../../../../enums';
 
 const MobileNumberAndRole = props => {
-
+    let [isEmployer, setIsEmployer] = useState(false);
     let [role, setRole] = useState();
     const [mobileNumberInputError, setMobileNumberInputError] = useState();
     const [passwordInputError, setPasswordInputError] = useState();
@@ -114,9 +114,20 @@ const MobileNumberAndRole = props => {
                 <Radio.Group
                     id='role' name='role' onChange={onRadioChanged} className='d-flex justify-content-center mt-4 w-100'
                     value={role}>
-                    <Radio className='radio-color' value={ENUMS.ROLES.values.REAL_EMPLOYEE}>{locales('titles.realEmployer')}</Radio>
-                    <Radio className='radio-color' value={ENUMS.ROLES.values.LEAGAL_EMPLOYEE}>{locales('titles.legalEmployer')}</Radio>
-                    <Radio value={ENUMS.ROLES.values.WORKER}>{locales('titles.iAmJobSeeker')}</Radio>
+                    <Radio
+                        onChange={() => setIsEmployer(false)}
+                        value={ENUMS.ROLES.values.WORKER}>{locales('titles.iAmJobSeeker')}</Radio>
+                    {!isEmployer ?
+                        <Radio onChange={event => setIsEmployer(event.target.checked)} value={isEmployer}>{locales('titles.iAmEmployer')}</Radio>
+                        :
+                        <>
+                            <span className='px-2'>{locales('titles.employer')}</span>
+                            (
+                            <Radio className='radio-color mx-2 d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.REAL_EMPLOYEE}>{locales('titles.real')}</Radio>
+                            <Radio className='radio-color d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.LEAGAL_EMPLOYEE}>{locales('titles.legal')}</Radio>
+                            )
+                        </>
+                    }
                 </Radio.Group>
                 <div className={`invalid-feedback ${!!roleInputError ? 'is-invalid-feedback' : ''}`}>
                     {roleInputError}

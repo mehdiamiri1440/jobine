@@ -1,0 +1,34 @@
+image: node:12.14.0
+
+stages:
+    - test
+    - build
+    - deploy
+test:
+    stage: test
+    script: 
+        - yarn
+        - CI=true yarn run test
+build:
+    stage: build
+    script:
+        - echo "Building deploy package"
+        - yarn install
+        - yarn build
+        - echo "Build successful"
+    artifacts:
+        expire_in: 1 hour
+        paths:
+            - build
+deploy:
+    stage: deploy
+    script:
+        - echo "Deploying to server"
+        - cp -rv build/* /var/www/html
+        - echo "Deployed"
+    only:
+        - master
+        
+
+
+    
