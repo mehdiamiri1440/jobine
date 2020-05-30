@@ -41,7 +41,7 @@ const SignUp = props => {
     }
 
     const renderSteps = _ => {
-        switch (2) {
+        switch (step) {
             case 1: {
                 return <MobileNumberAndRole sendVerificationCode={sendVerificationCode} />
             };
