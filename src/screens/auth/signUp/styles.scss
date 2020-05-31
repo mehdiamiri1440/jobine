@@ -3,7 +3,8 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   height: 650px;
+   height: 100vh;
+   min-height: 650px;
    width: 100%;
    background-color: black;
 }
@@ -77,6 +78,10 @@
    color: #747474;
 }
 @media (max-width: 767.9px){
+   span.ant-radio + *{
+      padding-left: 2px;
+      padding-right: 2px;
+   }
    :local(.text-primary){
       color: #ff4f4f;
    }
@@ -87,6 +92,7 @@
       background: #fff;
       height: auto;
       width: 100%;
+      min-height: auto;
    }
    :local(.signup-background) > div {
       border-top: 1px solid #dee2e6;

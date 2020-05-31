@@ -122,10 +122,10 @@ const MobileNumberAndRole = props => {
                         <Radio onChange={event => setIsEmployer(event.target.checked)} value={isEmployer}>{locales('titles.iAmEmployer')}</Radio>
                         :
                         <>
-                            <span className='px-2'>{locales('titles.employer')}</span>
+                            <span className='px-1 px-sm-2'>{locales('titles.employer')}</span>
                             (
-                            <Radio className='radio-color mx-2 d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.REAL_EMPLOYEE}>{locales('titles.real')}</Radio>
-                            <Radio className='radio-color d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.LEAGAL_EMPLOYEE}>{locales('titles.legal')}</Radio>
+                            <Radio className='radio-color mx-1 mx-sm-2 d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.REAL_EMPLOYEE}>{locales('titles.real')}</Radio>
+                            <Radio className='radio-color ml-1 d-flex align-items-center justify-content-center' value={ENUMS.ROLES.values.LEAGAL_EMPLOYEE}>{locales('titles.legal')}</Radio>
                             )
                         </>
                     }
@@ -133,7 +133,7 @@ const MobileNumberAndRole = props => {
                 <div className={`invalid-feedback ${!!roleInputError ? 'is-invalid-feedback' : ''}`}>
                     {roleInputError}
                 </div>
-                <div className="text-center d-md-none my-4">کد فعال سازی به برای شما ارسال خواهد شد.</div>
+                <div className="text-center d-md-none my-4">کد فعال سازی برای شما ارسال خواهد شد.</div>
             </div>
 
             <div className='d-flex justify-content-center w-100 w-md-75 m-auto'>
