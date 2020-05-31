@@ -133,7 +133,7 @@ const MobileNumberAndRole = props => {
                 <div className={`invalid-feedback ${!!roleInputError ? 'is-invalid-feedback' : ''}`}>
                     {roleInputError}
                 </div>
-                <div className="text-center d-md-none my-4">کد فعال سازی برای شما ارسال خواهد شد.</div>
+                <div className="text-center d-md-none my-4">{locales('titles.activisonCodeWillBeSent')}</div>
             </div>
 
             <div className='d-flex justify-content-center w-100 w-md-75 m-auto'>
@@ -142,7 +142,7 @@ const MobileNumberAndRole = props => {
             </div>
 
             <Link to='/login' className="d-none d-md-block">
-                <footer className='text-white btn-link my-5 pointer'>{locales('titles.goToLogin')}</footer>
+                <footer className='text-white btn-link my-5 pointer text-center'>{locales('titles.goToLogin')}</footer>
             </Link>
             {/* end of signup form */}
         </>

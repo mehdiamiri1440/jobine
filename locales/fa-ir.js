@@ -93,7 +93,7 @@ export default {
     'titles.similarityJobs': 'موقعیت های شغلی مشابه',
     'titles.interview': 'مصاحبه',
     'titles.people': 'نفر',
-    'titles.guide': 'راهنما',
+    'titles.activisonCodeWillBeSent': 'کد فعال سازی برای شما ارسال خواهد شد.',
     'titles.guide': 'راهنما',
 
 
