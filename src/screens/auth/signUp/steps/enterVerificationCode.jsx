@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { Input, Spin } from 'antd';
 import Timer from '../../../../components/timer';
 import { formatter, domManipulator } from '../../../../utils';
@@ -60,7 +61,7 @@ const EnterVerificationCode = props => {
 
         domManipulator.scrollToTop();
         props.validateVerificationCode(props.mobileNumber, verificationCode).then(res => {
-            props.changeStep(2);
+            props.history.push('/profile/dashboard');
         })
 
 
@@ -131,4 +132,4 @@ const mapDispatchToProps = (dispatch) => {
         validateVerificationCode: (mobileNumber, code) => dispatch(authActions.validateVerificationCode(mobileNumber, code))
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(EnterVerificationCode)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EnterVerificationCode));
