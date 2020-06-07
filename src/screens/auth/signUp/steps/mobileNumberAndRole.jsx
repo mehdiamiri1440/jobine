@@ -105,10 +105,10 @@ const MobileNumberAndRole = props => {
                 <div className={`invalid-feedback ${!!mobileNumberInputError ? 'is-invalid-feedback' : ''}`}>
                     {mobileNumberInputError}
                 </div>
-                <div className='text-center my-3 d-none d-md-block'>{locales('titles.password')}</div>
+                <div className='text-center my-2 my-md-3'>{locales('titles.password')}</div>
                 <Input.Password id='password' name='password'
                     value={password} onChange={onPasswordChanged}
-                    className={`invalid-feedback d-none d-md-block ${!!passwordInputError ? 'is-invalid' : ''} curved-border`} />
+                    className={`invalid-feedback ${!!passwordInputError ? 'is-invalid' : ''} curved-border`} />
                 <div className={`invalid-feedback ${!!passwordInputError ? 'is-invalid-feedback' : ''}`}>
                     {passwordInputError}
                 </div>
@@ -138,7 +138,7 @@ const MobileNumberAndRole = props => {
 
             <div className='d-flex justify-content-center w-100 w-md-75 m-auto'>
                 <button onClick={saveForm} className={`${styles['send-code-button']} btn btn-primary font-weight-bold curved-border w-50 d-none d-md-block`}>{locales('titles.sendConfirmationCode')}</button>
-                <button onClick={saveForm} className={`${styles['send-code-button']} btn btn-primary w-100 d-md-none`}>{locales('titles.login')}</button>
+                <button onClick={saveForm} className={`${styles['send-code-button']} btn btn-primary w-100 d-md-none`}>{locales('titles.sendConfirmationCode')}</button>
             </div>
 
             <Link to='/login' className="d-none d-md-block">
