@@ -10,3 +10,16 @@
     position: relative;
     bottom: -18px;
 }
+:local(#image_container){
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-width: 2px !important;
+    color: #c8ccd0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
